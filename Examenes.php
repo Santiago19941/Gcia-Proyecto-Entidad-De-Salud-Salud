@@ -26,7 +26,7 @@ if (!empty($_POST["examenes"])) {
 
     
     if ($resultado) {
-        if (mysqli_num_rows($resultado) > 10) {
+        if (mysqli_num_rows($resultado) > 0) {
             echo "<span class='pac-consultas-t'>Resultados" . "</span><br><br>";
             while ($fila = mysqli_fetch_assoc($resultado)) {
                 echo "<span class='pac-consultas-op'>Doctor: " . "</span>";
