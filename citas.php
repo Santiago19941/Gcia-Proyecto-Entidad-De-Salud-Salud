@@ -33,7 +33,7 @@ if (!empty($_POST["citas"])) {
 $resultado1 = mysqli_query($conexion, $consulta1);
 
     if ($resultado) {
-        if (mysqli_num_rows($resultado) > 10) {
+        if (mysqli_num_rows($resultado) > 0) {
             echo "<span class='pac-consultas-t'>Citas Programadas" . "</span><br><br>";
             while ($fila = mysqli_fetch_assoc($resultado)) {
                 echo "<span class='pac-consultas-op'>Doctor: " . "</span>";
@@ -52,7 +52,7 @@ $resultado1 = mysqli_query($conexion, $consulta1);
     }
 
     if ($resultado1) {
-        if (mysqli_num_rows($resultado1) > 10) {
+        if (mysqli_num_rows($resultado1) > 0) {
             echo "<span class='pac-consultas-t'>Citas disponibles" . "</span><br><br>";
             while ($fila = mysqli_fetch_assoc($resultado1)) {
                 echo "<span class='pac-consultas-op'>Doctor: " . "</span>";
